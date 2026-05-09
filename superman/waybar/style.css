@@ -1,0 +1,172 @@
+/* ══════════════════════════════════════════════════════
+   SUPERMAN — WAYBAR MINIMALISTA FLUTUANTE
+   Sem background na barra. Cada grupo é uma pílula.
+   Paleta: navy #080d14 | red #ec644c | blue #3fb0d8
+   ══════════════════════════════════════════════════════ */
+
+* {
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra totalmente transparente */
+#waybar {
+    background: transparent;
+    color: #c8d8e8;
+}
+
+/* ── Todos os módulos: sem fundo, só texto ─────────── */
+#cpu,
+#memory,
+#temperature,
+#wireplumber,
+#network,
+#battery,
+#tray,
+#clock,
+#window {
+    background: transparent;
+    color: rgba(200, 216, 232, 0.55);
+    padding: 0 8px;
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#wireplumber:hover,
+#network:hover,
+#battery:hover,
+#clock:hover {
+    color: rgba(200, 216, 232, 0.90);
+    transition: color 0.2s;
+}
+
+/* ── GRUPO ESQUERDO — pílula única ─────────────────── */
+.modules-left {
+    background: rgba(11, 18, 30, 0.82);
+    border-radius: 100px;
+    border: 1px solid rgba(236, 100, 76, 0.18);
+    padding: 0 4px;
+    margin: 0;
+}
+
+/* Power button dentro da pílula esquerda */
+#custom-power {
+    background: transparent;
+    color: rgba(236, 100, 76, 0.70);
+    font-size: 13px;
+    padding: 0 10px 0 8px;
+    margin: 0;
+    border-right: 1px solid rgba(236, 100, 76, 0.15);
+    margin-right: 2px;
+}
+
+#custom-power:hover {
+    color: #ec644c;
+}
+
+/* ── GRUPO CENTRAL — workspaces clean ─────────────── */
+#workspaces {
+    background: rgba(11, 18, 30, 0.82);
+    border-radius: 100px;
+    border: 1px solid rgba(63, 176, 216, 0.20);
+    padding: 0 6px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: rgba(200, 216, 232, 0.28);
+    padding: 0 11px;
+    margin: 3px 1px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    transition: all 0.18s ease;
+    min-width: 0;
+}
+
+#workspaces button.active {
+    background: rgba(236, 100, 76, 0.15);
+    color: #ec644c;
+    box-shadow: inset 0 0 0 1px rgba(236, 100, 76, 0.35);
+}
+
+#workspaces button:hover:not(.active) {
+    background: rgba(63, 176, 216, 0.10);
+    color: rgba(63, 176, 216, 0.80);
+}
+
+#workspaces button.urgent {
+    background: rgba(236, 100, 76, 0.25);
+    color: #ec644c;
+    animation: pulse 1s infinite alternate;
+}
+
+/* ── GRUPO DIREITO — pílula única ──────────────────── */
+.modules-right {
+    background: rgba(11, 18, 30, 0.82);
+    border-radius: 100px;
+    border: 1px solid rgba(63, 176, 216, 0.18);
+    padding: 0 4px;
+}
+
+/* Separadores sutis entre módulos da direita */
+#wireplumber {
+    border-left: 1px solid rgba(255,255,255,0.06);
+    padding-left: 10px;
+}
+
+/* Clock — destaque sutil à direita */
+#clock {
+    color: rgba(200, 216, 232, 0.80);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    padding: 0 10px 0 8px;
+    border-left: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Tray */
+#tray {
+    background: transparent;
+    padding: 0 6px;
+}
+
+/* Battery states */
+#battery.charging,
+#battery.plugged {
+    color: #3fb0d8;
+}
+
+#battery.warning:not(.charging) {
+    color: #f0a050;
+}
+
+#battery.critical:not(.charging) {
+    color: #ec644c;
+    animation: pulse 0.6s infinite alternate;
+}
+
+/* Temperature critical */
+#temperature.critical {
+    color: #ec644c;
+}
+
+/* Network disconnected */
+#network.disconnected {
+    color: rgba(236, 100, 76, 0.60);
+}
+
+@keyframes pulse {
+    from { opacity: 1; }
+    to   { opacity: 0.45; }
+}

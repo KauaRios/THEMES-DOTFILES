@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 8,
+    "margin-left": 16,
+    "margin-bottom": 0,
+    "margin-right": 16,
+    "spacing": 0,
+    "modules-left": [
+        "custom/power",
+        "cpu",
+        "memory",
+        "temperature"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "wireplumber",
+        "network",
+        "battery",
+        "tray",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {used:0.1f}G"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}{temperatureC}°",
+        "format-icons": ["", "", ""]
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm)",
+        "max-length": 20
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "spacing": 8,
+        "icon-size": 14
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}
