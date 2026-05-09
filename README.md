@@ -7,9 +7,9 @@ Bem-vindo ao repositório de **TEMAS**! Este projeto contém configurações per
 Abaixo você pode ver uma prévia dos temas disponíveis. Esta galeria será atualizada conforme novos temas forem adicionados ao diretório `assets/`.
 
 <div align="center">
-  <img src="./assets/dem.png" width="45%" alt="Tema Alucard">
-  <img src="./assets/dem2.png" width="45%" alt="Tema Branco">
-  <img src="./assets/dem3.png" width="45%" alt="Tema angel">
+  <img src="./assets/Alucard.png" width="45%" alt="Tema Alucard">
+  <img src="./assets/angel.png" width="45%" alt="Tema Branco">
+  <img src="./assets/Branco.png" width="45%" alt="Tema angel">
 </div>
 
 
