@@ -24,14 +24,13 @@ button:hover {
     background-color: rgba(180, 180, 255, 0.15);
     border: 1px solid #b4b4ff;
     color: #ffffff;
-    transform: scale(1.05);
     box-shadow: 0 0 20px rgba(180, 180, 255, 0.2);
 }
 
 /* Ícones (Mantendo os caminhos existentes) */
-#lock { background-image: image(url("icons/lock.png")); }
-#logout { background-image: image(url("icons/logout.png")); }
-#suspend { background-image: image(url("icons/suspend.png")); }
-#hibernate { background-image: image(url("icons/hibernate.png")); }
-#shutdown { background-image: image(url("icons/shutdown.png")); }
-#reboot { background-image: image(url("icons/reboot.png")); }
+#lock { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/lock.png"); }
+#logout { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/logout.png"); }
+#suspend { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/suspend.png"); }
+#hibernate { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/hibernate.png"); }
+#shutdown { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/shutdown.png"); }
+#reboot { background-image: url("/home/kauadev/TEMAS/angel/wlogout/icons/reboot.png"); }
