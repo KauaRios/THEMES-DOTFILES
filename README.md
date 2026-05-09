@@ -9,6 +9,7 @@ Abaixo você pode ver uma prévia dos temas disponíveis. Esta galeria será atu
 <div align="center">
   <img src="./assets/dem.png" width="45%" alt="Tema Alucard">
   <img src="./assets/dem2.png" width="45%" alt="Tema Branco">
+  <img src="./assets/dem3.png" width="45%" alt="Tema angel">
 </div>
 
 

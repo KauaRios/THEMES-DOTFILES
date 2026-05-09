@@ -1,0 +1,37 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    transition: all 0.3s cubic-bezier(.55,0,.1,1);
+}
+
+window {
+    background-color: rgba(5, 5, 15, 0.9);
+}
+
+button {
+    color: #e0e0ff;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 30px;
+    border: 1px solid rgba(180, 180, 255, 0.1);
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+}
+
+button:hover {
+    background-color: rgba(180, 180, 255, 0.15);
+    border: 1px solid #b4b4ff;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(180, 180, 255, 0.2);
+}
+
+/* Ícones (Mantendo os caminhos existentes) */
+#lock { background-image: image(url("icons/lock.png")); }
+#logout { background-image: image(url("icons/logout.png")); }
+#suspend { background-image: image(url("icons/suspend.png")); }
+#hibernate { background-image: image(url("icons/hibernate.png")); }
+#shutdown { background-image: image(url("icons/shutdown.png")); }
+#reboot { background-image: image(url("icons/reboot.png")); }

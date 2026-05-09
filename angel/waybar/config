@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 10,
+    "margin-left": 20,
+    "margin-right": 20,
+    "spacing": 15,
+
+    "modules-left": [
+        "cpu",
+        "memory",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "tray",
+        "network",
+        "wireplumber",
+        "battery",
+        "clock",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+            "1": "󰄭", 
+            "2": "󱄈", 
+            "3": "󰂚", 
+            "4": "󱩎", 
+            "5": "󰄯", 
+            "6": "󰭹", 
+            "7": "󱚜", 
+            "8": "󱦈", 
+            "9": "󰚀", 
+            "10": "󰐑"
+        }
+    },
+
+    "hyprland/window": {
+        "format": "󱄛 {title}",
+        "max-length": 25,
+        "separate-outputs": true
+    },
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃭 {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰻠 {usage}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "󰍛 {used:0.1f}G"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": ["󰕿", "󰖀", "󰕾"]
+    },
+
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}
