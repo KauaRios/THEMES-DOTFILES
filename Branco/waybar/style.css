@@ -1,0 +1,142 @@
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: #e0e0e0;
+}
+
+/* Estilo Base para todos os módulos - Inspirado no Wallpaper */
+#workspaces,
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#wireplumber,
+#tray,
+#custom-power {
+    background: rgba(18, 18, 18, 0.85); /* Fundo quase preto translúcido */
+    color: #b0b0b0; /* Cinza claro suave */
+    padding: 0 15px;
+    margin: 5px 3px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Workspaces com os ícones gregos */
+#workspaces {
+    background: rgba(10, 10, 10, 0.9);
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #555555;
+    background: transparent;
+    font-size: 16px;
+    margin: 2px 1px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #ffffff;
+}
+
+#workspaces button:hover {
+    color: #eeeeee;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#workspaces button.urgent {
+    color: #ff4444; /* Vermelho do detalhe da arma */
+}
+
+/* Janela Ativa */
+#window {
+    background: transparent;
+    border: none;
+    color: #888888;
+    font-style: italic;
+    box-shadow: none;
+}
+
+/* Relógio e Data */
+#clock {
+    background: rgba(25, 25, 25, 0.9);
+    color: #dcdccc; /* Tom bege claro da luz de fundo */
+    border-bottom: 2px solid rgba(220, 220, 204, 0.3);
+}
+
+/* Status do Sistema */
+#cpu {
+    color: #999999;
+}
+
+#memory {
+    color: #888888;
+}
+
+#temperature {
+    color: #777777;
+}
+
+#temperature.critical {
+    background: #441111;
+    color: #ff4444;
+}
+
+#wireplumber {
+    color: #aaaaaa;
+}
+
+#network {
+    color: #999999;
+}
+
+#battery {
+    color: #888888;
+}
+
+#battery.charging, #battery.plugged {
+    color: #dcdccc;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ff4444;
+    color: #ffffff;
+    animation: blink 0.5s infinite alternate;
+}
+
+/* Botão de Power destacado com o vermelho do pente */
+#custom-power {
+    background: #771111;
+    color: #ff4444;
+    padding: 0 12px;
+}
+
+#custom-power:hover {
+    background: #ff4444;
+    color: #ffffff;
+}
+
+#tray {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.5;
+    }
+}
