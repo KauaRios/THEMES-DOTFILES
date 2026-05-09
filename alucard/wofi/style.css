@@ -1,0 +1,41 @@
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    background-color: #0a0a0a;
+    border: 2px solid #8b0000;
+    border-radius: 0px;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: 1px solid #f1c40f;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#entry:selected {
+    background-color: rgba(139, 0, 0, 0.4);
+    border-left: 5px solid #ff0000;
+}
+
+#text:selected {
+    color: #f1c40f;
+}
+
+#text {
+    margin-left: 10px;
+}
+
+#text:selected {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#scroll {
+    margin-top: 5px;
+}

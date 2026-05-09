@@ -1,0 +1,100 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "spacing": 4,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        "wireplumber",
+        "network",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "μ",
+            "2": "π",
+            "3": "σ",
+            "4": "τ",
+            "5": "λ",
+            "6": "α",
+            "7": "β",
+            "8": "γ",
+            "9": "δ",
+            "10": "ζ"
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 35,
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "󰥔 {:%H:%M  󰃭 %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {used:0.1f}G"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm) ",
+        "max-length": 20
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "spacing": 8
+    },
+    "custom/power": {
+        "format": " ⏻",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}

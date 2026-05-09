@@ -1,0 +1,68 @@
+/* Cores Alucard */
+@define-color bg_dark #0a0a0a;
+@define-color blood_red #8b0000;
+@define-color bright_red #ff0000;
+@define-color alucard_yellow #f1c40f;
+@define-color silver #d1d1d1;
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: @silver;
+}
+
+#workspaces,
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#wireplumber,
+#tray,
+#custom-power {
+    background: @bg_dark;
+    color: @silver;
+    padding: 0 15px;
+    margin: 5px 3px;
+    border-radius: 4px;
+    border: 1px solid @blood_red;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #555555;
+}
+
+#workspaces button.active {
+    color: @bright_red;
+    border-bottom: 2px solid @bright_red;
+}
+
+#workspaces button.urgent {
+    color: @alucard_yellow;
+}
+
+#clock {
+    color: @alucard_yellow;
+    border: 1px solid @alucard_yellow;
+}
+
+#custom-power {
+    background: @blood_red;
+    color: white;
+}
+
+#custom-power:hover {
+    background: @bright_red;
+    box-shadow: 0 0 10px @bright_red;
+}

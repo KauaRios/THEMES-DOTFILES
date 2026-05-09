@@ -1,0 +1,52 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    transition: all 0.3s ease-in-out;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+button {
+    color: #d1d1d1;
+    background-color: rgba(139, 0, 0, 0.1);
+    border-radius: 0px;
+    border: 2px solid #8b0000;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:hover {
+    background-color: rgba(139, 0, 0, 0.5);
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px #8b0000;
+}
+
+/* Ícones */
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}
