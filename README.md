@@ -54,8 +54,11 @@ python sweeper.py
 
 - `alucard/`: Configurações do tema Alucard.
 - `Branco/`: Configurações do tema Branco.
+- `superman/`: Configurações do tema superman.
+- `angel/`: Configurações do tema angel.
 - `assets/`: Recursos visuais e screenshots.
 - `sweeper.py`: Script de automação.
+  
 
 ---
 *Desenvolvido para tornar sua experiência no desktop mais fluida e estilosa.*
