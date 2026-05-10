@@ -12,6 +12,8 @@ Abaixo você pode ver uma prévia dos temas disponíveis. Esta galeria será atu
   <img src="./assets/Branco.png" width="45%" alt="Tema angel">
   <img src="./assets/superman.png" width="45%" alt="Tema superman">
   <img src="./assets/roxo.png" width="45%" alt="Tema roxo">
+  <img src="./assets/azul.png" width="45%" alt="Tema azul">
+  <img src="./assets/dark.png" width="45%" alt="Tema dark">
 </div>
 
 

@@ -1,0 +1,190 @@
+/* ── Premium Dark - Waybar V2.9e Inspired ── */
+@define-color bg #0A0A0A;
+@define-color fg #D4D4D4;
+@define-color accent #C4413A;
+@define-color grey #2A2A2A;
+@define-color blink-fg #1A1A1A;
+
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 12px;
+    font-weight: 900;
+    border: none;
+    border-radius: 0px;
+    min-height: 0px;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#waybar > box {
+    margin: 2px 17px 5px 8px;
+    padding: 2px 0px 2px 0px;
+    border-radius: 5px;
+    border: 4px ridge @grey;
+    background-color: @bg;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9),
+                2px 2px 4px rgba(0, 0, 0, 0.6),
+                3px 3px 6px rgba(0, 0, 0, 0.4),
+                4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
+}
+
+#workspaces {
+    background-color: @bg;
+    transition: 0.1s ease-in-out;
+    margin: 0px;
+    padding: 0px;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    color: @accent;
+    opacity: 1;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+#workspaces button.active {
+    color: @bg;
+    border-radius: 2px;
+    background-color: @accent;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    opacity: 1.0;
+}
+
+#workspaces button.empty:hover,
+#workspaces button:hover {
+    background: transparent;
+    color: @fg;
+    transition: all 150ms ease;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+    opacity: 1;
+    border-radius: 2px;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    color: alpha(@fg, 0.25);
+}
+
+#workspaces button.empty.active {
+    opacity: 1;
+    border-radius: 2px;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    background-color: alpha(@fg, 0.5);
+    color: @bg;
+}
+
+#tray,
+#memory,
+#cpu,
+#battery,
+#battery.discharging,
+#battery.full,
+#battery.plugged,
+#battery.charging,
+#network,
+#network.disconnected,
+#network.wifi,
+#network.ethernet,
+#pulseaudio,
+#custom-clock,
+#wireplumber,
+#custom-power,
+#temperature {
+    min-width: 12px;
+    color: @fg;
+    opacity: 1;
+    padding: 1px 8px 1px 8px;
+    margin: 0px 0px 0px 0px;
+}
+
+#battery,
+#battery.discharging,
+#battery.charging {
+    padding-right: 14px;
+}
+
+#custom-clock {
+    color: @accent;
+}
+
+#tray {
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+#custom-power {
+    color: @accent;
+}
+
+#custom-power:hover {
+    background-color: @accent;
+    color: @bg;
+}
+
+tooltip {
+    padding: 4px;
+    background: @bg;
+    font-size: 10px;
+    border: 3px ridge @grey;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: alpha(@fg, 1);
+    font-weight: normal;
+}
+
+#battery.warning,
+#network.disconnected {
+    color: #8B3A2A;
+}
+
+#battery.critical:not(.charging) {
+    background-color: transparent;
+    color: @accent;
+    animation-name: blink2;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio.warning,
+#memory.warning,
+#cpu.warning,
+#temperature.warning {
+    color: #A08070;
+}
+
+#pulseaudio.critical,
+#memory.critical,
+#cpu.critical,
+#temperature.critical {
+    color: @accent;
+}
+
+@keyframes blink2 {
+    to {
+        background-color: transparent;
+        color: #8B3A2A;
+    }
+}

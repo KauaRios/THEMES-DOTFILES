@@ -1,0 +1,66 @@
+/* ── Premium Dark Blue - Wlogout ── */
+@define-color bg-deep         #0A0F14;
+@define-color bg-card         #0D1520;
+@define-color surface         #162332;
+@define-color fg-primary      #E0F7FF;
+@define-color fg-muted        #4A7A8A;
+@define-color accent          #00D4FF;
+@define-color accent-glow     #0891B2;
+@define-color cyan-bright     #5EEAD4;
+@define-color border-cyan     rgba(0, 212, 255, 0.3);
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    transition: all 0.2s ease-in-out;
+}
+
+window {
+    background-color: rgba(10, 15, 20, 0.92);
+}
+
+button {
+    color: @fg-primary;
+    background-color: rgba(13, 21, 32, 0.6);
+    border-radius: 16px;
+    border: 1px solid @border-cyan;
+    margin: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28%;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: rgba(0, 212, 255, 0.18);
+    border: 1px solid @cyan-bright;
+    color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.35),
+                inset 0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+#lock {
+    background-image: url("icons/lock.png");
+}
+
+#logout {
+    background-image: url("icons/logout.png");
+}
+
+#suspend {
+    background-image: url("icons/suspend.png");
+}
+
+#hibernate {
+    background-image: url("icons/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("icons/shutdown.png");
+}
+
+#reboot {
+    background-image: url("icons/reboot.png");
+}

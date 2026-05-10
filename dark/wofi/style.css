@@ -1,0 +1,65 @@
+/* ── Premium Dark - Wofi Anime Inspired ── */
+@define-color bg-deep #0A0A0A;
+@define-color bg-card #111111;
+@define-color bg-trans rgba(10, 10, 10, 0.92);
+@define-color fg-primary #D4D4D4;
+@define-color fg-muted #6B6B6B;
+@define-color accent #C4413A;
+@define-color accent-dim rgba(196, 65, 58, 0.3);
+@define-color entry-bg #7897e8;
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.95;
+    border: 2px solid rgba(196, 65, 58, 0.4);
+    background-color: rgba(17, 17, 17, 0.95);
+    border-radius: 0 14px 14px 0;
+}
+
+#input {
+    margin: 6px;
+    border: none;
+    color: #D4D4D4;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+#inner-box {
+    margin: 6px;
+    border: none;
+    background-color: rgba(17, 17, 17, 0.95);
+}
+
+#outer-box {
+    margin: 6px;
+    border: none;
+    background-color: rgba(17, 17, 17, 0.95);
+}
+
+#text {
+    margin: 6px;
+    border: none;
+    color: #D4D4D4;
+}
+
+#entry:selected {
+    background-color: rgba(196, 65, 58, 0.25);
+    border-left: 3px solid #C4413A;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+}
+
+list {
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 8px;
+    padding: 4px;
+}

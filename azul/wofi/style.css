@@ -1,0 +1,73 @@
+/* ── Premium Dark Blue - Wofi Harmony Inspired ── */
+@define-color bg-deep         #0A0F14;
+@define-color bg-card         #0D1520;
+@define-color surface         #162332;
+@define-color fg-primary      #E0F7FF;
+@define-color fg-muted        #4A7A8A;
+@define-color accent          #00D4FF;
+@define-color accent-glow     #0891B2;
+@define-color cyan-bright     #5EEAD4;
+@define-color border-cyan     #00D4FF;
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.95;
+    border: 2px solid @border-cyan;
+    background-color: rgba(10, 15, 20, 0.92);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.15);
+}
+
+#input {
+    margin: 8px;
+    margin-left: 10px;
+    border: none;
+    color: @fg-primary;
+    background-color: @surface;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border-left: 3px solid @accent;
+}
+
+#inner-box {
+    margin: 8px;
+    border: none;
+    background-color: @bg-card;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#text {
+    margin: 8px;
+    border: none;
+    color: @fg-primary;
+}
+
+#entry:selected {
+    background-color: rgba(0, 212, 255, 0.2);
+    border-left: 3px solid @cyan-bright;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+#entry:selected #text {
+    color: #FFFFFF;
+    text-shadow: 0 0 8px rgba(94, 234, 212, 0.5);
+}
+
+list {
+    background-color: @bg-card;
+    border-radius: 10px;
+    padding: 6px;
+}

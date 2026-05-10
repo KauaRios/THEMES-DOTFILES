@@ -1,0 +1,12 @@
+width=615
+height=450
+location=left
+allow_images=true
+allow_markup=true
+hide_scroll=true
+insensitive=true
+show=drun
+prompt=Search...
+halign=fill
+orientation=vertical
+content_halign=fill

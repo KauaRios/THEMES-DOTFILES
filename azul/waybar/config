@@ -1,0 +1,107 @@
+{
+  "reload_style_on_change": true,
+  "position": "top",
+  "gtk-layer-shell": true,
+  "margin-top": 2,
+  "margin-left": 80,
+  "margin-bottom": 0,
+  "margin-right": 80,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "wireplumber",
+    "network",
+    "cpu",
+    "memory",
+    "battery",
+    "tray",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "9+"
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "sort-by-number": true
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": true,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<small>{calendar}</small>"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "{usage}%",
+    "states": {
+      "warning": 50,
+      "critical": 80
+    }
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "{used:0.1f}G",
+    "states": {
+      "warning": 50,
+      "critical": 80
+    }
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": " mute",
+    "format-icons": ["", "", ""]
+  },
+
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": " off",
+    "max-length": 12
+  },
+
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  "tray": {
+    "icon-size": 13,
+    "spacing": 2
+  },
+
+  "custom/power": {
+    "format": " power",
+    "tooltip": false,
+    "on-click": "wlogout"
+  }
+}

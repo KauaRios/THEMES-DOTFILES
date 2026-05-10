@@ -1,0 +1,64 @@
+/* ── Premium Dark - Wlogout Variables ── */
+@define-color bg-deep #0A0A0A;
+@define-color bg-card #111111;
+@define-color bg-trans rgba(10, 10, 10, 0.92);
+@define-color fg-primary #D4D4D4;
+@define-color fg-muted #6B6B6B;
+@define-color accent #C4413A;
+@define-color accent-dark #5A1010;
+@define-color border rgba(255, 255, 255, 0.05);
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    transition: all 0.2s ease-in-out;
+}
+
+window {
+    background-color: @bg-trans;
+}
+
+button {
+    color: @fg-primary;
+    background-color: rgba(17, 17, 17, 0.6);
+    border-radius: 20px;
+    border: 1px solid @border;
+    margin: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28%;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: rgba(196, 65, 58, 0.18);
+    border: 1px solid @accent;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(196, 65, 58, 0.25);
+}
+
+#lock {
+    background-image: url("icons/lock.png");
+}
+
+#logout {
+    background-image: url("icons/logout.png");
+}
+
+#suspend {
+    background-image: url("icons/suspend.png");
+}
+
+#hibernate {
+    background-image: url("icons/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("icons/shutdown.png");
+}
+
+#reboot {
+    background-image: url("icons/reboot.png");
+}
