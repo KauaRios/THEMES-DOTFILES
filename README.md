@@ -43,7 +43,8 @@ O **Sweeper** (`sweeper.py`) é o coração da automação deste repositório. E
 Para aplicar um tema, basta rodar o `sweeper.py` passando o nome da pasta do tema como argumento:
 
 ```bash
-python sweeper.py alucard
+cd TEMAS/
+python sweeper.py [nome do tema]
 ```
 
 Se nenhum argumento for passado, o script aplicará o tema **Branco** por padrão:
