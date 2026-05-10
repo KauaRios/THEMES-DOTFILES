@@ -1,0 +1,53 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    transition: all 0.3s ease-in-out;
+}
+
+window {
+    background-color: rgba(17, 17, 27, 0.9); /* Catppuccin Mocha Crust */
+}
+
+button {
+    color: #cdd6f4;
+    background-color: rgba(30, 30, 46, 0.5);
+    border-radius: 20px;
+    border: 1px solid rgba(203, 166, 247, 0.1);
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+    background-color: rgba(203, 166, 247, 0.2);
+    border: 1px solid #cba6f7;
+    color: #cba6f7;
+    box-shadow: 0 0 15px rgba(203, 166, 247, 0.3);
+}
+
+/* Ícones */
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}

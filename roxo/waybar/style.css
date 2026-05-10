@@ -1,0 +1,142 @@
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: #e0e0e0;
+}
+
+/* Estilo Base para todos os módulos - Inspirado no Wallpaper */
+#workspaces,
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#wireplumber,
+#tray,
+#custom-power {
+    background: rgba(24, 24, 37, 0.85); /* Catppuccin Mocha Mantle */
+    color: #cdd6f4;
+    padding: 0 15px;
+    margin: 5px 3px;
+    border-radius: 12px;
+    border: 1px solid rgba(203, 166, 247, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Workspaces */
+#workspaces {
+    background: rgba(17, 17, 27, 0.9);
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #585b70;
+    background: transparent;
+    font-size: 16px;
+    margin: 2px 1px;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+    background: rgba(203, 166, 247, 0.1);
+    border-bottom: 2px solid #cba6f7;
+}
+
+#workspaces button:hover {
+    color: #f5e0dc;
+    background: rgba(203, 166, 247, 0.05);
+}
+
+#workspaces button.urgent {
+    color: #f38ba8; 
+}
+
+/* Janela Ativa */
+#window {
+    background: transparent;
+    border: none;
+    color: #bac2de;
+    font-style: italic;
+    box-shadow: none;
+}
+
+/* Relógio e Data */
+#clock {
+    background: rgba(30, 30, 46, 0.9);
+    color: #cba6f7;
+    border-bottom: 2px solid rgba(203, 166, 247, 0.3);
+}
+
+/* Status do Sistema */
+#cpu {
+    color: #b4befe;
+}
+
+#memory {
+    color: #cba6f7;
+}
+
+#temperature {
+    color: #f9e2af;
+}
+
+#temperature.critical {
+    background: #f38ba8;
+    color: #11111b;
+}
+
+#wireplumber {
+    color: #a6e3a1;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#battery.charging, #battery.plugged {
+    color: #a6e3a1;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #11111b;
+    animation: blink 0.5s infinite alternate;
+}
+
+/* Botão de Power destacado com roxo */
+#custom-power {
+    background: rgba(203, 166, 247, 0.2);
+    color: #cba6f7;
+    padding: 0 12px;
+}
+
+#custom-power:hover {
+    background: #cba6f7;
+    color: #11111b;
+}
+
+#tray {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.5;
+    }
+}
