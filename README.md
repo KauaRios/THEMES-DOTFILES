@@ -14,6 +14,7 @@ Abaixo você pode ver uma prévia dos temas disponíveis. Esta galeria será atu
   <img src="./assets/roxo.png" width="45%" alt="Tema roxo">
   <img src="./assets/azul.png" width="45%" alt="Tema azul">
   <img src="./assets/darkk.png" width="45%" alt="Tema dark">
+  <img src="./assets/skull.png" width="45%" alt="Tema skull">
 </div>
 
 
@@ -63,6 +64,7 @@ python sweeper.py
 - `roxo/`: Configurações do tema roxo.
 - `darkk/`: Configurações do tema dark.
 - `angel/`: Configurações do tema angel.
+- `skull/`: Configurações do tema skull.
 - `assets/`: Recursos visuais e screenshots.
 - `sweeper.py`: Script de automação.
   

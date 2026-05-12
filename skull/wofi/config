@@ -1,0 +1,16 @@
+width=600
+height=500
+location=top
+y=8
+show=drun
+prompt=Procurar...
+filter_rate=100
+allow_images=true
+hide_scroll=true
+no_actions=false
+halign=fill
+orientation=vertical
+content_halign=fill
+insensitivy=true
+dynamic_lines=true
+case-sensitive=false

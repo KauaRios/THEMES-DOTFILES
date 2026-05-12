@@ -1,0 +1,173 @@
+@define-color bg        #070b14;
+@define-color bg-alt    #0f1525;
+@define-color surface   #1a1f35;
+@define-color fg        #e2e8ff;
+@define-color muted     #566074;
+@define-color accent1   #2dd4bf;
+@define-color accent2   #f472b6;
+@define-color accent3   #60a5fa;
+@define-color accent4   #a78bfa;
+@define-color border    rgba(255, 255, 255, 0.05);
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+#waybar {
+    background: transparent;
+}
+
+#custom-launcher {
+    font-size: 18px;
+    padding: 0 14px 0 18px;
+    background: rgba(15, 21, 37, 0.55);
+    color: @accent1;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(45, 212, 191, 0.15);
+}
+
+#custom-launcher:hover {
+    background: rgba(45, 212, 191, 0.12);
+    border-color: rgba(45, 212, 191, 0.35);
+}
+
+#workspaces {
+    background: rgba(15, 21, 37, 0.5);
+    border-radius: 16px;
+    padding: 0 4px;
+    margin: 0 2px;
+    border: 1px solid @border;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 4px 2px;
+    color: @muted;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @accent1;
+    background: rgba(45, 212, 191, 0.1);
+    text-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
+}
+
+#workspaces button:hover {
+    color: @fg;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#workspaces button.empty {
+    color: rgba(86, 96, 116, 0.4);
+}
+
+#clock {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 20px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @fg;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    letter-spacing: 0.3px;
+}
+
+#cpu {
+    padding: 0 12px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @accent3;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+#memory {
+    padding: 0 12px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @accent4;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(167, 139, 250, 0.1);
+}
+
+#wireplumber {
+    padding: 0 12px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @fg;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid @border;
+}
+
+#network {
+    padding: 0 12px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @fg;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid @border;
+}
+
+#battery {
+    padding: 0 12px;
+    background: rgba(15, 21, 37, 0.5);
+    color: @accent1;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(45, 212, 191, 0.1);
+}
+
+#battery.warning {
+    color: @accent2;
+    border-color: rgba(244, 114, 182, 0.3);
+}
+
+#battery.critical {
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.4);
+    animation: blink 1s ease-in-out infinite;
+}
+
+#custom-power {
+    font-size: 16px;
+    padding: 0 14px;
+    background: rgba(15, 21, 37, 0.55);
+    color: @accent2;
+    border-radius: 16px;
+    margin: 0 2px;
+    border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+#custom-power:hover {
+    background: rgba(244, 114, 182, 0.12);
+    border-color: rgba(244, 114, 182, 0.35);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+tooltip {
+    background: rgba(7, 11, 20, 0.95);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+tooltip label {
+    color: @fg;
+    font-size: 13px;
+}
