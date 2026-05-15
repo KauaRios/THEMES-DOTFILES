@@ -15,6 +15,7 @@ Abaixo você pode ver uma prévia dos temas disponíveis. Esta galeria será atu
   <img src="./assets/azul.png" width="45%" alt="Tema azul">
   <img src="./assets/darkk.png" width="45%" alt="Tema dark">
   <img src="./assets/skull.png" width="45%" alt="Tema skull">
+  <img src="./assets/style.png" width="45%" alt="Tema styled">
 </div>
 
 
