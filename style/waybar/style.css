@@ -1,0 +1,189 @@
+* {
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: #D8D0CE;
+}
+
+.modules-left {
+    background: rgba(22, 22, 26, 0.88);
+    border-top: 2px solid #873A41;
+    border-bottom: 2px solid #873A41;
+    border-left: 2px solid #873A41;
+    padding: 0 2px;
+}
+
+.modules-center {
+    background: rgba(22, 22, 26, 0.88);
+    border-top: 2px solid #5D5B5C;
+    border-bottom: 2px solid #5D5B5C;
+    padding: 0 2px;
+}
+
+.modules-right {
+    background: rgba(22, 22, 26, 0.88);
+    border-top: 2px solid #947370;
+    border-bottom: 2px solid #947370;
+    border-right: 2px solid #947370;
+    padding: 0 2px;
+}
+
+#custom-power {
+    background: rgba(135, 58, 65, 0.15);
+    color: #873A41;
+    font-size: 14px;
+    padding: 0 9px;
+    min-width: 16px;
+}
+
+#custom-power:hover {
+    background: #873A41;
+    color: #111011;
+}
+
+#cpu,
+#memory {
+    background: transparent;
+    color: rgba(127, 126, 128, 0.55);
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    border-right: 1px solid rgba(61, 59, 60, 0.3);
+}
+
+#temperature {
+    background: transparent;
+    color: rgba(127, 126, 128, 0.55);
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover {
+    color: rgba(232, 199, 187, 0.75);
+    background: rgba(232, 199, 187, 0.04);
+}
+
+#temperature.critical {
+    color: #873A41;
+}
+
+#workspaces {
+    background: transparent;
+    padding: 0;
+}
+
+#workspaces button {
+    background: transparent;
+    color: rgba(127, 126, 128, 0.12);
+    padding: 0 5px;
+    margin: 3px 1px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    min-width: 0;
+    transition: all 0.12s ease;
+    border: 1px solid transparent;
+}
+
+#workspaces button.active {
+    color: #E8C7BB;
+    background: rgba(232, 199, 187, 0.08);
+    border: 1px solid rgba(232, 199, 187, 0.2);
+    box-shadow: 0 0 6px rgba(232, 199, 187, 0.06);
+}
+
+#workspaces button:hover:not(.active) {
+    color: rgba(148, 115, 112, 0.65);
+    border: 1px solid rgba(148, 115, 112, 0.15);
+}
+
+#workspaces button.urgent {
+    color: #873A41;
+    border: 1px solid #873A41;
+    animation: shard-pulse 0.7s infinite alternate;
+}
+
+#wireplumber,
+#network {
+    background: transparent;
+    color: rgba(127, 126, 128, 0.55);
+    padding: 0 9px;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    border-right: 1px solid rgba(61, 59, 60, 0.3);
+}
+
+#battery {
+    background: transparent;
+    color: rgba(127, 126, 128, 0.55);
+    padding: 0 9px;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+}
+
+#wireplumber:hover,
+#network:hover,
+#battery:hover {
+    color: rgba(148, 115, 112, 0.75);
+    background: rgba(148, 115, 112, 0.04);
+}
+
+#network.disconnected {
+    color: rgba(135, 58, 65, 0.45);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: rgba(148, 115, 112, 0.65);
+}
+
+#battery.warning:not(.charging) {
+    color: rgba(232, 199, 187, 0.65);
+}
+
+#battery.critical:not(.charging) {
+    color: #873A41;
+    animation: shard-pulse 0.5s infinite alternate;
+}
+
+#tray {
+    background: transparent;
+    padding: 0 6px;
+}
+
+#clock {
+    background: transparent;
+    color: rgba(232, 199, 187, 0.5);
+    padding: 0 12px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+}
+
+#clock:hover {
+    color: rgba(232, 199, 187, 0.85);
+    background: rgba(232, 199, 187, 0.04);
+}
+
+@keyframes shard-pulse {
+    from {
+        opacity: 1;
+        box-shadow: 0 0 4px rgba(135, 58, 65, 0.08);
+    }
+    to {
+        opacity: 0.35;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "margin-top": 4,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "modules-left": [
+        "custom/power",
+        "cpu",
+        "memory",
+        "temperature"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "wireplumber",
+        "network",
+        "battery",
+        "tray",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "◇",
+            "2": "◈",
+            "3": "◆",
+            "4": "○",
+            "5": "●",
+            "6": "□",
+            "7": "■",
+            "8": "△",
+            "9": "▲",
+            "10": "▶"
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true
+    },
+    "clock": {
+        "format": " {:HH:mm}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#873A41'><b>{}</b></span>",
+                "days": "<span color='#7F7E80'>{}</span>",
+                "today": "<span color='#E8C7BB'><b>{}</b></span>",
+                "weekdays": "<span color='#947370'>{}</span>"
+            }
+        }
+    },
+    "cpu": {
+        "interval": 2,
+        "format": " {:2}%",
+        "max-length": 8
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {:3}G"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}{temperatureC}°",
+        "format-icons": ["", "", ""]
+    },
+    "wireplumber": {
+        "format": "{icon}{volume:2}%",
+        "format-muted": "",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": " {:2}%",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm)",
+        "max-length": 12
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity:2}%",
+        "format-charging": "{capacity:2}%",
+        "format-plugged": " {capacity:2}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "spacing": 4,
+        "icon-size": 12
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}

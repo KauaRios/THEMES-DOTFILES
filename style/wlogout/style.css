@@ -1,0 +1,61 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrains Mono Nerd Font", "Fira Code", monospace;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+window {
+    background: rgba(17, 16, 17, 0.94);
+}
+
+button {
+    color: rgba(127, 126, 128, 0.35);
+    background: rgba(22, 22, 26, 0.65);
+    border-radius: 0;
+    border-top: 2px solid rgba(93, 91, 92, 0.25);
+    border-bottom: 2px solid rgba(93, 91, 92, 0.25);
+    border-left: none;
+    border-right: none;
+    margin: 8px;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-size: 26%;
+    padding-top: 58px;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background: rgba(135, 58, 65, 0.12);
+    border-top: 2px solid #873A41;
+    border-bottom: 2px solid #873A41;
+    color: rgba(232, 199, 187, 0.85);
+    box-shadow:
+        0 0 0 3px rgba(135, 58, 65, 0.06),
+        0 4px 16px rgba(17, 16, 17, 0.5);
+}
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}
