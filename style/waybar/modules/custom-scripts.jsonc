@@ -1,0 +1,33 @@
+{
+  "custom/mail": {
+    "format": "{}",
+    "interval": 300,
+    "exec-if": "which python3",
+    "exec": "python3 ~/.config/waybar/modules/mail.py 2>/dev/null || echo ''",
+    "return-type": "json",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "format": "{}",
+    "interval": 1800,
+    "exec-if": "which curl",
+    "exec": "bash ~/.config/waybar/modules/weather.sh 2>/dev/null || echo ''",
+    "return-type": "json",
+    "tooltip": true
+  },
+  "custom/storage": {
+    "format": "{}",
+    "interval": 3600,
+    "exec": "bash ~/.config/waybar/modules/storage.sh 2>/dev/null || echo '{\"text\":\"\"}'",
+    "return-type": "json",
+    "tooltip": true
+  },
+  "custom/spotify-nowplaying": {
+    "format": "{}",
+    "interval": 5,
+    "exec-if": "which playerctl",
+    "exec": "bash ~/.config/waybar/modules/spotify.sh 2>/dev/null || echo ''",
+    "return-type": "json",
+    "tooltip": false
+  }
+}

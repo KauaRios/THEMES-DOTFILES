@@ -86,6 +86,11 @@ for item in origem.iterdir():
 
         link_simbolico(item, destino)
 
+    elif item.is_file() and item.name != "sweeper.py":
+        destino=pasta_config / item.name
+        link_simbolico(item,destino)
+        print(f"Starship Funcionando")
+
 
 comandos = [
     ["hyprctl", "reload"],
@@ -103,6 +108,7 @@ for comando in comandos:
 pasta_wallpapers = pasta_do_tema / "wallpapers"
 wallpaper_atual = pasta_wallpapers / "wallpaper.png"
 config_hyprpaper = Path.home() / ".config" / "hypr" / "hyprpaper.conf"
+
 
 if wallpaper_atual.exists():
     try:

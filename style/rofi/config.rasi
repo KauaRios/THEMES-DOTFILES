@@ -1,0 +1,149 @@
+configuration {
+    modi:                "drun,filebrowser,window,run";
+    show-icons:          true;
+    drun-display-format: "{name}";
+
+    display-drun:        " ";
+    display-run:         " ";
+    display-filebrowser: " ";
+    display-window:      " ";
+
+    hover-select:        true;
+    me-select-entry:     "";
+    me-accept-entry:     "MousePrimary";
+    icon-theme:          "breeze-dark";
+
+    matching:            "prefix";
+    tokenize:            false;
+    case-sensitive:      false;
+    sort:                true;
+    sorting-method:      "levenshtein";
+}
+
+* {
+    font:           "Cantarell, JetBrainsMono Nerd Font 12";
+    bg:             #0f1416;
+    bg-element:     rgba(255, 255, 255, 0.00);
+    bg-selected:    #88d1ec;
+    bg-dock:        #1b2023;
+    bg-btn:         #40484c;
+    bg-btn-active:  #303638;
+    fg:             #dee3e6;
+    fg-muted:       #bfc8cc;
+    fg-btn:         #b3cad4;
+    fg-btn-active:  #dee3e6;
+    border-win:     #88d1ec;
+    fg-prompt:      #f38ba8;
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            640px;
+    background-color: @bg;
+    border:           3px;
+    border-color:     @border-win;
+    border-radius:    22px;
+}
+
+mainbox {
+    orientation:      horizontal;
+    background-color: transparent;
+    children:         [ "leftbox", "mode-switcher" ];
+}
+
+leftbox {
+    orientation:      vertical;
+    background-color: transparent;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:          true;
+    padding:          20px 20px 10px 20px;
+    background-color: transparent;
+    children:         [ "prompt", "entry" ];
+}
+
+entry {
+    background-color:  transparent;
+    text-color:        @fg;
+    placeholder:       "Search...";
+    placeholder-color: @fg-btn;
+    padding:           0 10px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @fg-prompt;
+}
+
+listview {
+    background-color: transparent;
+    columns:          4;
+    lines:            3;
+    spacing:          10px;
+    padding:          10px 20px 20px 20px;
+    fixed-columns:    true;
+    fixed-height:     true;
+    cycle:            false;
+}
+
+element {
+    orientation:      vertical;
+    padding:          10px;
+    border-radius:    16px;
+    spacing:          10px;
+    background-color: @bg-element;
+    children:         [ element-icon, element-text ];
+}
+
+element selected {
+    background-color: @bg-selected;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             64px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       @fg-muted;
+    horizontal-align: 0.5;
+    font:             "Cantarell, JetBrainsMono Nerd Font 11";
+}
+
+element selected element-text {
+    text-color: @fg;
+}
+
+element-text highlight {
+    text-color: @fg;
+}
+
+mode-switcher {
+    background-color: @bg-dock;
+    width:            85px;
+    padding:          60px 10px;
+    spacing:          20px;
+    border-radius:    0 20px 20px 0;
+    orientation:      vertical;
+    children:         [ button ];
+}
+
+button {
+    background-color: @bg-btn;
+    text-color:       @fg-btn;
+    border-radius:    50px;
+    padding:          14px 0px;
+    cursor:           pointer;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+button selected {
+    background-color: @bg-btn-active;
+    text-color:       @fg-btn-active;
+}
